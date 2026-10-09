@@ -1,0 +1,103 @@
+/* Basic page design */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e9edf5;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* Calculator box */
+.calculator {
+    width: 340px;
+    max-width: 100%;
+    padding: 22px;
+    background: #202633;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px #0002;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    margin-top: 0;
+}
+
+/* Calculator display */
+#display {
+    width: 100%;
+    height: 85px;
+    margin-bottom: 18px;
+    padding: 12px;
+    border-radius: 10px;
+    background: #f4f6fa;
+    color: #202633;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#expression{
+    font-size:16px;
+    color:#777;
+    min-height:22px;
+    overflow:hidden;
+}
+#result{
+    font-size:30px;
+    font-weight:bold;
+    overflow:hidden;
+    white-space:nowrap;
+}
+/* Button grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4,minmax(0, 1fr));
+    gap: 10px;
+}
+
+button {
+    width:100%;
+    min-width:0;
+    height:58px;
+    border:none;
+    border-radius:12px;
+}
+
+button:hover {
+    background: #4a566b;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Special button colours */
+.utility {
+    background: #596579;
+}
+
+.operator {
+    background: #e58b35;
+}
+
+.operator:hover {
+    background: #f2a34e;
+}
+
+.equals {
+    background: #27a879;
+}
+
+.equals:hover {
+    background: #32bd8b;
+}
